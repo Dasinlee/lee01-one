@@ -1,0 +1,102 @@
+/* 設置網頁的基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 設置主要內容容器的樣式 */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* 設置標題樣式 */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+/* 調整列表和內容的內距 */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.list-item {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 4px solid #333;
+}
+
+/* 設置連結的樣式 */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 增加頁面間距與背景顏色 */
+.personal-info, .education, .experience, .skills, .autobiography, .job-intent {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* 調整各段區塊的標題顏色與樣式 */
+h2.section-title {
+    color: #00539C;
+}
+
+/* 設定網頁在小螢幕上的響應式樣式 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+    ul li {
+        font-size: 16px;
+    }
+}
