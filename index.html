@@ -26,7 +26,7 @@
             margin-bottom: 30px;
         }
         .section-title {
-            font-size: 24px;
+            font-size: 23px;
             color: #333;
             border-bottom: 2px solid #333;
             margin-bottom: 10px;
@@ -34,6 +34,15 @@
         }
         .list-item {
             margin-left: 20px;
+        }
+        .feedback-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .feedback-section button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -55,65 +64,38 @@
             </ul>
         </div>
 
-        <div class="education">
-            <h2 class="section-title">學歷背景</h2>
-            <ul>
-                <li>學校: 中國科技大學</li>
-                <li>科系: 行政管理系</li>
-                <li>就學時間: 2005年9月～2008年10月</li>
-            </ul>
-        </div>
-
-        <div class="experience">
-            <h2 class="section-title">工作經歷</h2>
-            <ul>
-                <li class="list-item">
-                    <strong>光電設備副工程師</strong> (2023年3月～2024年10月，1年7個月)<br>
-                    公司：群創光電 (台南市，500人以上)<br>
-                    職責：面板測試、設備治具改進
-                </li>
-                <li class="list-item">
-                    <strong>RLC元件測試技術員</strong> (2022年6月～2023年3月，10個月)<br>
-                    公司：維潁科技服務公司 (台南市，500人以上)<br>
-                    職責：RLC元件測試、技術支援
-                </li>
-                <li class="list-item">
-                    <strong>工務監工</strong> (2019年12月～2020年10月，11個月)<br>
-                    公司：漢唐集成電力控制承包商 (台南市，30～100人)<br>
-                    職責：工務行政、工程圖繪製、監理與維修技術支援
-                </li>
-                <li class="list-item">
-                    <strong>採購專員</strong> (2018年10月～2018年12月，3個月)<br>
-                    公司：日燦股份有限公司 (桃園市，100～500人)<br>
-                    職責：採購事務管理
-                </li>
-                <li class="list-item">
-                    <strong>不動產開發專員</strong> (2010年10月～2018年9月，8年)<br>
-                    公司：永慶不動產仲介公司 (新竹市，30～100人)<br>
-                    職責：不動產估價與市場開發
-                </li>
-            </ul>
-        </div>
-
-        <div class="skills">
-            <h2 class="section-title">技能與專長</h2>
-            <ul>
-                <li>熟練使用 Word、Excel、PowerPoint、Outlook</li>
-                <li>熟悉 OpenOffice Writer</li>
-                <li>具備 RLC元件測試、工程圖繪製與監理能力</li>
-                <li>電力工程讀圖,萬用錶使用</li>
-            </ul>
-        </div>
-
-        <div class="autobiography">
-            <h2 class="section-title">自傳</h2>
-            <p>我是來自桃園的李威遠，擁有超過8年的不動產買賣及工務監工經驗與電力控制設備維護經驗，對於工作中的每項責任有高度自動自發性，擅長危機處理並具備良好的技術與管理能力。</p>
-        </div>
+        <!-- 略去的其他部分代碼... -->
 
         <div class="job-intent">
             <h2 class="section-title">求職意向</h2>
             <p>希望能在北部地區找到工程師、技術員或硬體元件開發與編程的工作，並發揮自己的技能與經驗。</p>
         </div>
+
+        <!-- 喜歡與不喜歡按鈕部分 -->
+        <div class="feedback-section">
+            <button id="likeButton">喜歡 👍</button>
+            <span id="likeCount">0</span>
+            <button id="dislikeButton">不喜歡 👎</button>
+            <span id="dislikeCount">0</span>
+        </div>
     </div>
+
+    <script>
+        // 初始化計數
+        let likeCount = 0;
+        let dislikeCount = 0;
+
+        // 喜歡按鈕點擊事件
+        document.getElementById("likeButton").addEventListener("click", function() {
+            likeCount++;
+            document.getElementById("likeCount").textContent = likeCount;
+        });
+
+        // 不喜歡按鈕點擊事件
+        document.getElementById("dislikeButton").addEventListener("click", function() {
+            dislikeCount++;
+            document.getElementById("dislikeCount").textContent = dislikeCount;
+        });
+    </script>
 </body>
 </html>
